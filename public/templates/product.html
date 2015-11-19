@@ -8,9 +8,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <h1>
-                        <a href="/catalog/index.html">Product Catalog</a> &rarr; {product.title}
-                    </h1>
+                    <a href="/catalog/index.html">News</a> > {product.title}
                 </div>
             </div>
         </div>
@@ -25,6 +23,22 @@
                     <div class="row">
                         <div class="col-md-8">
                             <h1><b>{product.title}</b></h1>
+
+
+                            <div class="imgBorder">
+                                <a href="/catalog/product.html?id={product._doc}">
+                                    <img src="/preview/node/{product._doc}/thumbnail_large?&mimetype=image/jpeg&force=true" alt="{title}" class="img-responsive" />
+                                </a>
+                                <p>
+                                {product.caption}
+                                </p>
+                            </div>
+
+                            <h5>{product.date} {product.author}</h5>
+                            <p>
+                                {product.summary}
+                            </p>
+
                             <div class="rating-holder">
                                 {@select key="{product._statistics.ratingAverageValue}"}
                                 {@lte value="1"}
@@ -67,13 +81,21 @@
                                     ({@math key="{product._statistics.ratingAverageValue}" method="round"/} stars based on {product._statistics.ratingTotalCount} reviews)
                                 </p>
                             </div>
-                            <br/>
+                            <hr/>
                             <h3>{product.headline}</h3>
                             <p>
                                 {product.body|s}
+                            </p>                            
+                        </div>
+                        <div class="col-md-4 mb30">
+                            
+                            <p>
+                                ${product.subscription}
                             </p>
-
-                            <hr/>
+                            <br/>
+                            <div class="pull-right">
+                                <a class="btn btn-default">Buy Now</a>
+                            </div>
 
                             <h3><b>Reviews</b></h3>
                             {@associations node="{product._doc}" type="catalog:product-has-review"}
@@ -148,26 +170,6 @@
                             </div>
                             {/rows}
                             {/associations}
-                        </div>
-                        <div class="col-md-4 mb30">
-                            <div class="imgBorder">
-                                <a href="/catalog/product.html?id={product._doc}">
-                                    <img src="/preview/node/{product._doc}/thumbnail_large?size=480&mimetype=image/jpeg&force=true" alt="{title}" class="img-responsive" />
-                                </a>
-                            </div>
-                            <h3>{product.title}</h3>
-                            <h5>{product.sku}</h5>
-                            <p>
-                                {product.summary}
-                            </p>
-                            <p>
-                                ${product.price}
-                            </p>
-                            <br/>
-                            <div class="pull-right">
-                                <a class="btn btn-default">Buy Now</a>
-                            </div>
-                            <div style="clear:both"></div>
                         </div>
                     </div>
                 </section>

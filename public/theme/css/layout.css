@@ -730,7 +730,7 @@ hr {
 
 @media(min-width:768px){
 	
-	body{padding-top: 88px;}
+	body{padding-top: 130px;}
 	h1 {
 		font-size: 40px;
 	}
@@ -1786,10 +1786,9 @@ ul.entry-meta li {display:inline-block; margin-bottom:11px; }
 /* PAGES
 ================================================== */
 .page-header .col-sm-6{ margin-bottom:0; }
-.page-header{padding: 33px 0;margin:0;}
+.page-header{padding: 8px 0;margin:0;}
 .page-header.bigHeader {
 	padding-bottom:0;
-	background-image:url('../images/theme-pics/big-header.jpg');
 	background-position: top center;
 	background-repeat: no-repeat;
 }

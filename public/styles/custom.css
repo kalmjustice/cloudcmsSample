@@ -1,3 +1,14 @@
+header.navbar-fixed-top,
+body {
+    background: url(/images/logo/header-bg.jpg);
+    background-repeat: repeat-x;
+    background-position: top center;
+}
+#mainHeader {
+    background:transparent!important;
+    box-shadow:none!important;
+    border-bottom:none!important;
+}
 .rating-holder img
 {
     width: 24px;
@@ -18,9 +29,26 @@
     font-weight: 400;
 }
 
+.review-holder .review .media-left a
+{
+    height:100px;
+    width:100px;
+    display:block;
+    border-radius:50%;
+    overflow:hidden;
+}
+
 .review-holder .review .media-left img
 {
-    border-radius: 4px;
+    width:100px;
+    border-radius:50%;
+    height:auto;
+}
+#preHeader {
+    background:#333;
+}
+#preHeader {
+    background:#333;
 }
 
 #front-parallax
