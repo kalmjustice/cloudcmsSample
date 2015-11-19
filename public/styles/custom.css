@@ -29,7 +29,7 @@ body {
     font-weight: 400;
 }
 
-.review-holder .review .media-left a
+.review-holder .review .media-left div > a
 {
     height:100px;
     width:100px;
@@ -41,7 +41,7 @@ body {
 .review-holder .review .media-left img
 {
     width:100px;
-    border-radius:50%;
+ 
     height:auto;
 }
 #preHeader {

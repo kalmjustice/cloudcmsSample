@@ -30,13 +30,13 @@
                                     <img src="/preview/node/{product._doc}/thumbnail_large?&mimetype=image/jpeg&force=true" alt="{title}" class="img-responsive" />
                                 </a>
                                 <p>
-                                {product.caption}
+                                {product.caption|s}
                                 </p>
                             </div>
 
-                            <h5>{product.date} {product.author}</h5>
+                            <h5>{product.publishdate} {product.author}</h5>
                             <p>
-                                {product.summary}
+                                {product.headline}
                             </p>
 
                             <div class="rating-holder">
@@ -82,20 +82,24 @@
                                 </p>
                             </div>
                             <hr/>
-                            <h3>{product.headline}</h3>
+                            <h3>{product.summary}</h3>
                             <p>
                                 {product.body|s}
                             </p>                            
                         </div>
                         <div class="col-md-4 mb30">
                             
-                            <p>
-                                ${product.subscription}
+                            <p style="margin-top:128px">
+                                {product.subscription}
                             </p>
-                            <br/>
                             <div class="pull-right">
                                 <a class="btn btn-default">Buy Now</a>
                             </div>
+                            <hr/>
+
+                            <p>
+                                ${product.references|s}
+                            </p>
 
                             <h3><b>Reviews</b></h3>
                             {@associations node="{product._doc}" type="catalog:product-has-review"}
