@@ -976,7 +976,7 @@ body#onePage #mainHeader.navbar{ border: none;}
 
 /* HEADER
 ================================================== */
-#preHeader{display:none!important;}
+/*#preHeader{display:none!important;}*/
 .navbar-brand{padding:22px 0;}
 /** pre header **/
 
